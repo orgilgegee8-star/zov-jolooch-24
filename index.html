@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Зөв Жолооч 24</title>
+  <link rel="manifest" href="./manifest.json" />
+  <meta name="theme-color" content="#D97706" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; }
+    body {
+      background: #0F172A;
+      color: #F8FAFC;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      max-width: 480px;
+      margin: 0 auto;
+      border-left: 1px solid #1E293B;
+      border-right: 1px solid #1E293B;
+    }
+    header {
+      padding: 16px 20px;
+      background: #1E293B;
+      border-bottom: 1px solid #334155;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    header img {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      object-fit: cover;
+      border: 1.5px solid #F59E0B;
+    }
+    header h1 {
+      font-size: 18px;
+      color: #FBBF24;
+    }
+    header p {
+      font-size: 12px;
+      color: #CBD5E1;
+      margin-top: 2px;
+    }
+    main {
+      flex: 1;
+      padding: 18px;
+      padding-bottom: 84px;
+    }
+    .screen { display: none; }
+    .screen.active { display: block; }
+    .card {
+      background: #1E293B;
+      border: 1px solid #334155;
+      border-radius: 14px;
+      padding: 16px;
+      margin-bottom: 12px;
+    }
+    .card h2 {
+      font-size: 16px;
+      margin-bottom: 6px;
+      color: #F8FAFC;
+    }
+    .card p {
+      font-size: 13px;
+      color: #94A3B8;
+      margin-bottom: 12px;
+      line-height: 1.45;
+    }
+    .call-btn {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 13px 16px;
+      background: linear-gradient(135deg, #F59E0B, #D97706);
+      color: #0F172A;
+      font-weight: 700;
+      font-size: 15px;
+      text-decoration: none;
+      border-radius: 10px;
+      margin-top: 8px;
+    }
+    .sub-btn {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      background: #334155;
+      color: #F8FAFC;
+      border: none;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+    .primary-btn {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      background: #F59E0B;
+      color: #0F172A;
+      border: none;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 12px;
+    }
+    input {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid #475569;
+      background: #0F172A;
+      color: #F8FAFC;
+      font-size: 15px;
+      margin-top: 8px;
+    }
+    nav {
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 480px;
+      background: #1E293B;
+      border-top: 1px solid #334155;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+    }
+    nav button {
+      background: none;
+      border: none;
+      color: #94A3B8;
+      padding: 12px 4px;
+      font-size: 12px;
+      cursor: pointer;
+    }
+    nav button.active {
+      color: #FBBF24;
+      font-weight: 700;
+    }
+    .status-note {
+      font-size: 12px;
+      color: #FBBF24;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="./logo.png" alt="Зөв Жолооч 24 лого" />
+    <div>
+      <h1>Зөв Жолооч 24</h1>
+      <p>Даатгалтай, эрсдэлгүй үйлчилгээ • Зөв жолооч — таны дотны туслах</p>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1-р дэлгэц: Нүүр / 6 шууд дуудлага -->
+    <section id="screen-home" class="screen active">
+      <div class="card">
+        <h2>Шуурхай дуудлагын үйлчилгээ</h2>
+        <p>Автомат байршил хуваалцахгүй — товч дарж шууд залган оператороос чиглэл авна.</p>
+
+        <a class="call-btn" href="tel:70116060"><span>1. Дуудлагын жолооч</span><span>70116060</span></a>
+        <a class="call-btn" href="tel:88507948"><span>2. Аккумулятор холбох (12V / 24V)</span><span>88507948</span></a>
+        <a class="call-btn" href="tel:88507948"><span>3. Машин асаалт</span><span>88507948</span></a>
+        <a class="call-btn" href="tel:88507948"><span>4. Дуудлагын дугуй засвар</span><span>88507948</span></a>
+        <a class="call-btn" href="tel:70707070"><span>5. Авто ачилт</span><span>70707070</span></a>
+        <a class="call-btn" href="tel:70116060"><span>6. Сэлбэг хүргэлт</span><span>70116060</span></a>
+      </div>
+    </section>
+
+    <!-- 2-р дэлгэц: Дуудлагын жолооч -->
+    <section id="screen-driver" class="screen">
+      <div class="card">
+        <h2>Дуудлагын жолооч</h2>
+        <p>Таны машиныг аюулгүй хүргэж өгөх жолооч дуудах хэсэг.</p>
+        <a class="call-btn" href="tel:70116060"><span>Үндсэн дугаар</span><span>70116060</span></a>
+        <a class="call-btn" href="tel:86981950"><span>Жолооч дуудах шууд шугам</span><span>8698-1950</span></a>
+      </div>
+    </section>
+
+    <!-- 3-р дэлгэц: Яаралтай тусламж -->
+    <section id="screen-rescue" class="screen">
+      <div class="card">
+        <h2>Яаралтай тусламж & Ачилт</h2>
+        <p>12V/24V аккумулятор холбох, хөлдсөн/суусан машин асаалт, дугуй засвар, авто ачилт.</p>
+        <a class="call-btn" href="tel:88507948"><span>Асаалт / Акк / Дугуй</span><span>88507948</span></a>
+        <a class="call-btn" href="tel:70707070"><span>Авто ачилт</span><span>70707070</span></a>
+      </div>
+    </section>
+
+    <!-- 4-р дэлгэц: Шууд нэвтрэх / Профайл -->
+    <section id="screen-account" class="screen">
+      <div class="card">
+        <h2>Шууд нэвтрэх</h2>
+        <p>SMS баталгаажуулах код шаардахгүйгээр дугаараа оруулан шууд орно.</p>
+        <input id="phoneInput" type="tel" placeholder="Утасны дугаар (жишээ: 88507948)" />
+        <button class="primary-btn" onclick="directLogin()">Шууд нэвтрэх</button>
+        <div id="loginStatus" class="status-note"></div>
+      </div>
+      <div class="card">
+        <h2>Зөв Жолооч — таны дотны туслах</h2>
+        <p>Даатгалтай, эрсдэлгүй үйлчилгээ • Сэлбэг хүргэлт: 70116060</p>
+      </div>
+    </section>
+  </main>
+
+  <nav>
+    <button class="active" onclick="showScreen('screen-home', this)">Нүүр</button>
+    <button onclick="showScreen('screen-driver', this)">Жолооч</button>
+    <button onclick="showScreen('screen-rescue', this)">Тусламж</button>
+    <button onclick="showScreen('screen-account', this)">Нэвтрэх</button>
+  </nav>
+
+  <script>
+    function showScreen(id, btn) {
+      document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+      document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      btn.classList.add('active');
+    }
+
+    function directLogin() {
+      const val = document.getElementById('phoneInput').value.trim();
+      const status = document.getElementById('loginStatus');
+      if (!val) {
+        status.textContent = 'Утасны дугаараа оруулна уу.';
+        return;
+      }
+      localStorage.setItem('zov_jolooch_phone', val);
+      status.textContent = 'Нэвтэрлээ: ' + val + ' (SMS код шаардлагагүй)';
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      const saved = localStorage.getItem('zov_jolooch_phone');
+      if (saved) {
+        document.getElementById('phoneInput').value = saved;
+        document.getElementById('loginStatus').textContent = 'Нэвтэрсэн дугаар: ' + saved;
+      }
+    });
+  </script>
+</body>
+</html>
